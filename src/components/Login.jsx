@@ -71,7 +71,7 @@ function Login() {
                                 onError={(credentialResponse) => {
                                     responseGoogle(credentialResponse);
                                             }}
-                        />;
+                        />
                     </div>
                 </div>
                

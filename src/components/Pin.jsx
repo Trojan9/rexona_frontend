@@ -81,7 +81,7 @@ const Pin = ({pin}) => {
                         onClick={(e)=>e.stopPropagation()}
                         >
                             <BsFillArrowUpRightCircleFill/>
-                            {pin?.destination.length>20? pin?.destination.slice(8,20):pin?.destination.slice(8)}
+                            {pin?.destination.length>15? `${pin?.destination.slice(0,12)}...`:`${pin?.destination}`}
                         </a>)}
                         { pin?.postedBy?._id===user?.sub && (
                         <button type='button' 
@@ -98,7 +98,7 @@ const Pin = ({pin}) => {
 
             </div>)}
         </div>
-        <Link to={`userProfile/${pin?.postedBy?._id}`} className='flex gap-2 mt-2 items-center'>
+        <Link to={`/userProfile/${pin?.postedBy?._id}`} className='flex gap-2 mt-2 items-center'>
             <img
             className='w-8 h-8 rounded-full object-cover'
             src={pin?.postedBy?.image}

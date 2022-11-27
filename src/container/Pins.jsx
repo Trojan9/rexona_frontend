@@ -13,12 +13,13 @@ const Pins = ({user}) => {
         <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} user={user}/>
       </div>
       {/* this holds the routes to components tha would be showed..thhey all share same navBar */}
+      {/* to navigate to anywhere here in any of the page just use the Link featue of react-router the add the to..it will automatically add the parameters needed to them from here */}
       <div className='h-full'>
         <Routes>
           <Route path='/' element={<Feed/>}/>
           <Route path='/category/:categoryId' element={<Feed/>}/>
           <Route path='/pin-details/:pinId' element={<PinDetails user={user && user}/>}/>
-          <Route path='/create-pin' element={<CreatePin use={user&&user}/>}/>
+          <Route path='/create-pin' element={<CreatePin user={user&&user}/>}/>
           <Route path='/search' element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>}/>
         </Routes>
       </div>

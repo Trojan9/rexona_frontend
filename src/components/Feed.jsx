@@ -28,7 +28,9 @@ const Feed = () => {
       
     }
   }, [categoryId])
+
   if(Loading)return <Spinner message='we are adding new ideas to your spinner'/>
+  if(!pins?.length>0)return <h2 className='flex mt-10 items-center justify-center'>No pins available</h2>
 
   return (
     <div>
