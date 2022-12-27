@@ -6,8 +6,8 @@ import logo from '../assets/logo.png';
 import { categories } from '../utils/data';
 // we destryctured the props coming
 const Sidebar = ({user,closeToggle}) => {
-    const isNotActiveStyle='flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-i-out capitalize';
-    const isActiveStyle='flex items-center px-5 gap-3 font-extrabold border-r-2 border-black transition-all duration-200 ease-i-out capitalize';
+    const isNotActiveStyle='flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
+    const isActiveStyle='flex items-center px-5 gap-3 font-extrabold border-r-2 border-black transition-all duration-200 ease-in-out capitalize';
     const handleCloseSidebar=()=>{
         // this comes from the home..the setToggleSidebar useState
         if(closeToggle)closeToggle(false);
